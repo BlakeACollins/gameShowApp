@@ -6,10 +6,10 @@
 :root {
   --color-win: #78CF82;
   --color-lose: #D94545;
-  --color-start: #5b85b7;
+  --color-start: #124480;
   --color-neutral: #445069;
   --color-neutral-light: #D2D2D2;
-  --color-keys: #37474F;
+  --color-keys: rgb(31, 40, 44);
   --color-keys-light: #E5E5E5;
   --font-size-large: 60px;
   --font-size-medium: 20px;
@@ -93,8 +93,8 @@ button {
 }
 
 .show {
-  color: #000;
-  background-color: #76CE82;
+  color: whitesmoke;
+  background-color: rgb(32, 29, 230);
 }
 
 /* Keyboard */
@@ -115,7 +115,7 @@ button {
   padding: 8px;
   margin: 50px auto;
   background: #FFFFFF;
-  border-radius: 5px;
+  border-radius: 25px;
   font-size: var(--font-size-medium);
 }
 
