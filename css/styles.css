@@ -4,15 +4,15 @@
 /* Variables */
 
 :root {
-  --color-win: #78CF82;
-  --color-lose: #D94545;
-  --color-start: #124480;
+  --color-win: white;
+  --color-lose: black;
+  --color-start: #050f9b;
   --color-neutral: #445069;
   --color-neutral-light: #D2D2D2;
   --color-keys: rgb(31, 40, 44);
   --color-keys-light: #E5E5E5;
-  --font-size-large: 60px;
-  --font-size-medium: 20px;
+  --font-size-large: 80px;
+  --font-size-medium: 45px;
   --transition: all .2s ease-in-out;
 }
 
@@ -43,13 +43,14 @@ h2 {
 }
 
 button {
+  color: rgb(160, 4, 38);
   margin: 6px;
   border: 1px solid transparent;
   padding: .5rem 1rem;
   color: var(--color-keys);
   font-size: var(--font-size-medium);
   background-color: var(--color-keys-light);
-  border-radius: 5px;
+  border-radius: 25px;
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
@@ -73,6 +74,7 @@ button {
 
 .header {
   color: var(--color-start);
+  font-size: 4em;
 }
 
 /* Phrase */
@@ -93,8 +95,8 @@ button {
 }
 
 .show {
-  color: whitesmoke;
-  background-color: rgb(32, 29, 230);
+  color: black;
+  background-color: rgba(83, 83, 83, 0.253);
 }
 
 /* Keyboard */
@@ -114,7 +116,7 @@ button {
 .btn__reset {
   padding: 8px;
   margin: 50px auto;
-  background: #FFFFFF;
+  background: rgb(160, 4, 38);
   border-radius: 25px;
   font-size: var(--font-size-medium);
 }
@@ -160,4 +162,24 @@ button {
 
 .lose a {
   color: var(--color-lose);
+}
+/* Side Scroll Bar-------------------------------------------------------------------------*/
+::-webkit-scrollbar-track
+{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+    border-radius: 10px;
+    background-color: grey;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: rgb(160, 4, 38);
+    background-image: -webkit-linear-gradient(90deg,transparent rgba(0, 0, 0, 0.4) 50%, transparent, transparent)
 }
