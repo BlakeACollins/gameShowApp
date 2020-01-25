@@ -3,11 +3,11 @@ const title = overlay.firstElementChild;
 const reset_button = overlay.lastElementChild;
 const phrase_container = document.querySelector("#phrase ul");
 const phrases = [
-  `Same as always`,
-  `It was nice chatting with you`,
-  `It costs a fortune`,
-  `It was a real bargain`,
-  `I can hardly keep my eyes open`,
+  `Piece of cake`,
+  `Back to the drawing board`,
+  `Blast from the past`,
+  `Break a leg`,
+  `Actions speak louder then words`,
 ];
 const keyboard = document.querySelector("#qwerty");
 const buttons = document.querySelectorAll("#qwerty button");
@@ -15,7 +15,7 @@ const lives = document.querySelectorAll(".tries img");
 
 let missed = 0;
 
-// reset game function - resets counter, phrase, buttons, lives
+//RESET GAME
 const reset_game = ()=> {
   missed = 0;
   while (phrase_container.children.length > 0) {
@@ -33,7 +33,7 @@ const reset_game = ()=> {
   phrase_letters = document.querySelectorAll("li[class*=letter]");
 }
 
-// controls to start and restart the game
+// START AND RESET
 overlay.addEventListener("click", (event) => {
   const e = event.target;
   if (e.tagName.toLowerCase() === "a") {
@@ -46,7 +46,7 @@ overlay.addEventListener("click", (event) => {
   }
 })
 
-// generates and returns a random phrase from the phrases array
+// RETURNS A RANDOM PHRASE
 const getRandomPhraseAsArray = (array) => {
   let random = Math.floor( Math.random() * array.length);
   const random_phrase = phrases[random];
@@ -56,7 +56,7 @@ const getRandomPhraseAsArray = (array) => {
 
 let phrase_array = getRandomPhraseAsArray(phrases);
 
-// displays the p hrase generated to the document
+// ADDS PHRASE TO THE DISPLAY
 const addPhraseToDisplay = (array)=>{
   for ( i = 0 ; i < array.length ; i++) {
     let character = array[i];
@@ -75,7 +75,7 @@ addPhraseToDisplay(phrase_array);
 
 let phrase_letters = document.querySelectorAll("li[class*=letter]");
 
-// checks if the selected letter on the keyboard matches any of the characters in the phrase 
+// CHECKS LETTER SELECTED TO RANDOM PHRASE 
 const checkLetter = (button)=>{
   const selected_letter = button;
   let letter = null;
@@ -89,13 +89,13 @@ const checkLetter = (button)=>{
   return letter;
 }
 
-// removes a life if an incorrect character is selected on the keyboard
+// REMOVES ONE LIFE IF THE WRONG LETTER IS USED
 const remove_life = ()=> {
   let lives_counter = missed - 1;
   lives[lives_counter].setAttribute("src", "images/lostHeart.png");
 }
 
-// changes overlay based on game result
+// BACKGROUND COLOR FOR WIN/LOSE
 const game_outcome = (result)=> {
   overlay.style.display = "";
   if (result === "win"){
@@ -109,7 +109,7 @@ const game_outcome = (result)=> {
   }
 }
 
-// checks if the user has won or lost
+// CHECKING TO SEE IF USER WON/LOSS
 const checkWin = ()=>{
   const phrase_show = document.querySelectorAll("li[class*=show]");
   if (phrase_show.length === phrase_letters.length) {
