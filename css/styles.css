@@ -83,8 +83,9 @@ button {
   font-size: var(--font-size-medium);
   height: 65px;
   width: 65px;
-  padding: 20px 1px 0 1px;
-  margin-right: 2px;
+  padding: 1px 1px 0 1px;
+  margin-right: 3px;
+  margin-bottom: 3px;
   color: transparent;
   background: var(--color-neutral-light);
   border-radius: 5px;
