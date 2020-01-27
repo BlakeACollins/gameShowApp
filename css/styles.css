@@ -89,6 +89,7 @@ button {
   color: transparent;
   background: var(--color-neutral-light);
   border-radius: 5px;
+  transition: all .6s .3s ease-out;
 }
 
 .space {
